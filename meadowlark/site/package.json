@@ -1,0 +1,15 @@
+{
+  "name": "wdne",
+  "version": "1.0.0",
+  "description": "creating a project while learning node and express",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sharanya Nair",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0"
+  }
+}
