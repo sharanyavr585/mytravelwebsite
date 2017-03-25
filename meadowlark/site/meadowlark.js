@@ -15,6 +15,13 @@ app.set('port', process.env.PORT||3000);
 
 app.use(express.static(__dirname + '/public'));
 
+//Middleware to ensure that mocha page tester runs only on production environment
+app.use(function(req,res,next){
+	res.locals.showTests = app.get('env') !='production' &&
+	req.query.test == '1';
+	next();
+});
+
 app.get('/',function(req,res){
 	//res.type('text/plain');
 	//res.send('Meadowlark Travel');
